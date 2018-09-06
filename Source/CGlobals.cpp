@@ -32,10 +32,10 @@ app_globals app_glo;
 app_globals::app_globals()
 {
 	  memset(this, 0, sizeof(app_globals));
-	  	f_version = 1.16f;
+	  	f_version = 1.17f;
 		
 		sprintf(st_version_long, "V%.2f - Compiled %s at %s.", f_version, __DATE__, __TIME__);
-	    sprintf(st_version, "V1.16");
+	    sprintf(st_version, "V1.17");
 		sprintf(st_name, "Teenage Lawnmower");
 		p_player = new CPlayer();
 }

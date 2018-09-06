@@ -25,6 +25,17 @@
 #include "3d\\CPicMeter.h"
 #include "CScriptEngine.h"
 
+
+//hardcoded for my xbox controller... works better for me at least
+
+int PAD_A_BUTTON = 0;
+int PAD_X_BUTTON = 2;
+int PAD_Y_BUTTON = 3;
+int PAD_B_BUTTON = 1;
+int PAD_SELECT_BUTTON = 6;
+int PAD_RIGHT_SHOULDER = 5;
+
+
 #ifdef _ENABLE_MEMORY_DEBUGGING_
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -548,7 +559,7 @@ void CEntMower::process_keys()
 	//change views?
 	if (
         (cls_tglo.p_cls_input->is_key_tapped(DIK_TAB))
-        || (cls_tglo.p_cls_input->GetAnyJoystickButtonTapped(5))
+        || (cls_tglo.p_cls_input->GetAnyJoystickButtonTapped(PAD_SELECT_BUTTON))
         )
 	{
 		this->i_view++;
@@ -699,6 +710,10 @@ void CEntMower::AddTileToMowed()
 	  
 }
 
+
+
+
+
 void CEntMower::think()
 {
     
@@ -719,20 +734,18 @@ void CEntMower::think()
 	{
 		process_keys();
       
-        
-
       
-         if (cls_tglo.p_cls_input->GetAnyJoystickButton(3))
+    if (cls_tglo.p_cls_input->GetAnyJoystickButton(PAD_A_BUTTON))
     {
         cls_tglo.p_cls_input->SetVirtualKey(C_INPUT_FORWARD, 1);
     }
 
-    if (cls_tglo.p_cls_input->GetAnyJoystickButton(2))
+    if (cls_tglo.p_cls_input->GetAnyJoystickButton(PAD_B_BUTTON))
     {
         cls_tglo.p_cls_input->SetVirtualKey(C_INPUT_BACKWARD, 1);
     }
 
-    if (cls_tglo.p_cls_input->GetAnyJoystickButtonTapped(1))
+    if (cls_tglo.p_cls_input->GetAnyJoystickButtonTapped(PAD_X_BUTTON))
     {
         cls_tglo.p_cls_input->SetVirtualKey(C_INPUT_ACTION3, 1);
     }
@@ -850,10 +863,6 @@ void CEntMower::think()
     }
 
 
-
-   
-   
-   
          
         if (cls_tglo.p_cls_input->GetAnyJoystickDir(C_INPUT_JOY_LEFT))
         {
@@ -881,8 +890,6 @@ void CEntMower::think()
 	bool b_moved = false;
 
 	
-
-
 	if (get_pos_y() < f_ground_height+0.01f)
 	{
 				if ( i_sound_mode == C_MOW_MOWING )
@@ -906,7 +913,7 @@ void CEntMower::think()
                   //  ||
                   //  (cls_tglo.p_cls_input->GetAnyJoystickButtonTapped(0))
                     ||
-                    (cls_tglo.p_cls_input->GetAnyJoystickButtonTapped(0))
+                    (cls_tglo.p_cls_input->GetAnyJoystickButtonTapped(PAD_Y_BUTTON))
                     )
                 {
                     
@@ -930,9 +937,8 @@ void CEntMower::think()
     if (
         (cls_tglo.p_cls_input->IsVirtualKeyDown(C_INPUT_ACTION2))
         ||
-        (cls_tglo.p_cls_input->GetAnyJoystickButton(6))
-        ||
-        (cls_tglo.p_cls_input->GetAnyJoystickButton(7))
+        (cls_tglo.p_cls_input->GetAnyJoystickButton(PAD_RIGHT_SHOULDER))
+        
         )
     {
       f_sens_mod = 2.0f; //super sharp turn

@@ -92,17 +92,16 @@ Section "-Main Game" SecMain
 SectionIn RO
   SetOutPath "$INSTDIR"
   File "..\game\mow.exe"
-  File "..\game\msvcp60.dll"
   File "..\game\fmod.dll"
   
   SetOutPath "$INSTDIR\data"
   File "..\game\data\*.*"
 
   SetOutPath "$INSTDIR\script"
-  File "..\game\script\*.*"
+  File /r "..\game\script\*.*"
 
 	SetOutPath "$INSTDIR\scriptg"
-  File "..\game\scriptg\*.*"
+  File /r "..\game\scriptg\*.*"
 
 
   SetOutPath "$INSTDIR\docs"
@@ -186,7 +185,6 @@ Section "Uninstall"
 ;default delete
 
   Delete "$INSTDIR\mow.exe"
-  Delete "$INSTDIR\msvcp60.dll"
   Delete "$INSTDIR\fmod.dll"
   Delete "$INSTDIR\temp"
   Delete "$INSTDIR\Uninstall.exe"

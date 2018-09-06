@@ -188,7 +188,7 @@ void CJoystick::SetButtonInfo(int i_but, bool b_on)
 void CJoystick::ProcessData()
 {
     
-    const int i_epsilon = 5000;
+    const int deadZone = 10000;
     const int i_nutural = 32767; 
     
   
@@ -196,7 +196,7 @@ void CJoystick::ProcessData()
     //let's process the directions and buttons for "tapped" response
 
   // log_msg("X is %d, y is %d",m_js.lX, m_js.lY );
-    if (m_js.lX < i_nutural-i_epsilon)
+    if (m_js.lX < i_nutural-deadZone)
     {
         //left
         this->SetDirectionButtonInfo(C_INPUT_JOY_LEFT, 1);
@@ -205,7 +205,7 @@ void CJoystick::ProcessData()
         this->SetDirectionButtonInfo(C_INPUT_JOY_LEFT, 0);
     }
  
-     if (m_js.lX > i_nutural+i_epsilon)
+     if (m_js.lX > i_nutural+deadZone)
     {
         //right
         this->SetDirectionButtonInfo(C_INPUT_JOY_RIGHT, 1);
@@ -214,10 +214,11 @@ void CJoystick::ProcessData()
         this->SetDirectionButtonInfo(C_INPUT_JOY_RIGHT, 0);
     }
  
+	//disabling up and down, player should use buttons instead
 
+    /*
     
-    
-    if (m_js.lY < i_nutural-i_epsilon)
+    if (m_js.lY < i_nutural-deadZone)
     {
         //up
        this->SetDirectionButtonInfo(C_INPUT_JOY_UP, 1);
@@ -227,7 +228,7 @@ void CJoystick::ProcessData()
        this->SetDirectionButtonInfo(C_INPUT_JOY_UP, 0);
     }
     
-    if (m_js.lY > i_nutural+i_epsilon)
+    if (m_js.lY > i_nutural+deadZone)
     {
         //down
         this->SetDirectionButtonInfo(C_INPUT_JOY_DOWN, 1);
@@ -235,18 +236,16 @@ void CJoystick::ProcessData()
     {
         this->SetDirectionButtonInfo(C_INPUT_JOY_DOWN, 0);
     }
-    
+
+	*/
 
     //now do same thing but for the buttons
-
 
     for (int i=0; i < C_JOY_MAX_BUTTONS; i++)
     {
         if (m_js.rgbButtons[i])
           this->SetButtonInfo(i, 1); else this->SetButtonInfo(i, 0);
     }
-
-
 }
 
 

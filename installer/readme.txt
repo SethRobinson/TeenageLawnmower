@@ -1,3 +1,40 @@
+Teenage Lawnmower freeware release
+
+Keyboard controls:
+
+Arrow keys - Move and turn
+V - Hold down to turn quicker
+Space - Jump
+Enter - Use Weed Killer
+Tab - Cycle camera views
+Escape - Open pause menu
+
+To use a gamepad, plug in an Xbox 360 compatible controller BEFORE starting the game.
+
+Xbox gamepad controls:
+
+Left stick - Steering
+A - Forward
+B - Backwards
+X - Use Weed killer
+Y - Jump
+Select - Cycle camera views
+Right shoulder - Hold down to turn quicker
+
+Notes:
+
+- Background menu graphics get stretched weird on large screen resolutions (3440X1440 for example), but the gameplay part works ok.
+- Version upped to 1.17, jobs give randomized payments, boulders do less damage, Gamepad input tweaked, game script files are now included unprotected, you can edit them with a text editor if you want
+- Mouse required to use menus, gamepad can't be used for that
+- This project is now on github, fork if you wanted to port/fix stuff ( https://github.com/SethRobinson/TeenageLawnmower )
+
+Credits:
+
+Code - Seth A. Robinson
+Art - Akiko Robinson
+
+www.rtsoft.com
+
 BORING LICENSE AGREEMENT STUFF:
 
 This Software License Agreement ("License Agreement") is a legal agreement between you (either an individual or an entity) and Robinson Technologies ("RTsoft") for the software product, which included computer software and any other additional media, whether provided in physical form or received online in electronic form.
