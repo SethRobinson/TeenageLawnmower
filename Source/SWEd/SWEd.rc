@@ -1,0 +1,810 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SWEd.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SWED_DIALOG DIALOGEX 0, 0, 469, 282
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_APPWINDOW
+CAPTION "SWED by Seth A. Robinson"
+MENU IDR_MENU_FILE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_3D DIALOGEX 0, 0, 298, 190
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "3D VIEW"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_LOG DIALOGEX 0, 0, 384, 116
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Log Output"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LOG,0,7,384,109,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | NOT WS_TABSTOP
+END
+
+IDD_NEW DIALOG DISCARDABLE  0, 0, 217, 119
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Zone"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Create!",IDOK,7,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,98,50,14
+    LTEXT           "X:",IDC_STATIC,7,52,8,8
+    LTEXT           "Y:",IDC_STATIC,52,52,8,8
+    LTEXT           "WARNING: Creating a new zone will destroy the zone currently in memory.\n\nEnter the demensions of the new area.",
+                    IDC_STATIC,7,7,203,39
+    EDITTEXT        IDC_X,20,50,26,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Y,65,50,26,12,ES_AUTOHSCROLL
+    LTEXT           "Block size:",IDC_STATIC,98,52,35,8
+    EDITTEXT        IDC_BLOCK_SIZE,138,50,26,12,ES_AUTOHSCROLL
+    LTEXT           "A small block size means more detail, but the landscape is smaller.",
+                    IDC_STATIC,7,72,203,21
+END
+
+IDD_TERRAFORM DIALOG DISCARDABLE  0, 0, 186, 98
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Terraform Zone"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Terraform!",IDOK,7,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,77,50,14
+    LTEXT           "This option let's you quickly create a random landscape using B-splines.  Uses current landscape as the base.",
+                    IDC_STATIC,7,7,172,26
+    LTEXT           "Max height:",IDC_STATIC,7,36,44,10
+    LTEXT           "Height  Scale:",IDC_STATIC,93,36,48,10
+    LTEXT           "Hill frequency:",IDC_STATIC,7,48,50,10
+    LTEXT           "Hill Scale:",IDC_STATIC,93,47,50,10
+    LTEXT           "Run how many times:",IDC_STATIC,7,62,69,10
+    EDITTEXT        IDC_F_HEIGHT,58,35,25,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_F_HILL_FREQ,58,48,25,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_F_HEIGHT_SCALE,143,36,25,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_F_HILL_SCALE,143,48,25,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RUN_TIMES,80,62,25,10,ES_AUTOHSCROLL
+END
+
+IDD_WORLD_EDIT DIALOGEX 0, 0, 190, 112
+STYLE DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Texture Window"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_TEX_LIST,7,35,176,70,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Paste full tiles only",IDC_PASTE_FULL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,93,20,76,12
+    CONTROL         "Flip X",IDC_FLIPX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    7,22,37,9
+    CONTROL         "Flip Z",IDC_FLIPZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    49,22,37,9
+    LTEXT           "Mode:",IDC_STATIC,7,8,21,8
+    COMBOBOX        IDC_LIST_MODE,35,6,62,71,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Overlay Mode",IDC_OVERLAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,107,6,76,9
+END
+
+IDD_LANDSCAPE DIALOGEX 0, 0, 186, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Landscape Window"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Modify",IDC_OP_ADD,"Button",BS_AUTORADIOBUTTON,13,21,49,
+                    8
+    CONTROL         "Set",IDC_OP_SUBTRACT,"Button",BS_AUTORADIOBUTTON,71,21,
+                    25,8
+    CONTROL         "Smooth",IDC_OP_SMOOTH,"Button",BS_AUTORADIOBUTTON,120,
+                    21,44,8
+    GROUPBOX        "Operation Select",IDC_STATIC,7,7,166,31
+    EDITTEXT        IDC_MOD_AMOUNT,77,42,46,12,ES_AUTOHSCROLL
+    LTEXT           "Modification Value:",IDC_STATIC,7,43,66,9
+    LTEXT           "Tip:  In Modify mode, use the left mouse button to add, right mouse button to subtract.  Set the modify value low to make small changes.",
+                    IDC_STATIC,7,59,179,27
+    PUSHBUTTON      "Update All Buildings && Walls",IDC_UPDATE_ALL,42,90,102,
+                    13
+END
+
+IDD_ZONE_PROP DIALOG DISCARDABLE  0, 0, 186, 113
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Zone Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,92,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,92,50,14
+    LTEXT           "Gravity Override (0 for default) :",IDC_STATIC,7,29,99,
+                    9
+    EDITTEXT        IDC_GRAVITY,112,27,44,12,ES_AUTOHSCROLL
+    LTEXT           "Zone Title:",IDC_STATIC,7,8,35,8
+    EDITTEXT        IDC_ST_NAME,49,7,130,12,ES_AUTOHSCROLL
+    LTEXT           "Tile Size:",IDC_STATIC,7,43,30,8
+    EDITTEXT        IDC_ST_TILE_SIZE,47,42,38,12,ES_AUTOHSCROLL
+    LTEXT           "Tiles per block",IDC_STATIC,7,59,47,8
+    EDITTEXT        IDC_ST_TILES_PER_BLOCK,63,58,38,12,ES_AUTOHSCROLL
+    LTEXT           "Height scale mod, leave 1 to not change:",IDC_STATIC,6,
+                    77,131,8
+    EDITTEXT        IDC_ST_HEIGHT_MOD,141,75,38,12,ES_AUTOHSCROLL
+END
+
+IDD_SUB_ZONE DIALOG DISCARDABLE  0, 0, 367, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Sub Zone Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,101,144,73,14
+    LTEXT           "Choose sub zone to edit:",IDC_STATIC,7,9,81,11
+    COMBOBOX        IDC_LIST_SUB,93,7,183,89,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Sub Zone Properties",IDC_STATIC,7,25,353,113
+    LTEXT           "Name:",IDC_STATIC,45,41,22,8
+    EDITTEXT        IDC_SUB_NAME,73,39,99,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add new sub zone",IDC_SUB_NEW,296,7,64,14
+    LTEXT           "Height Style:",IDC_STATIC,26,57,41,8
+    COMBOBOX        IDC_LIST_STYLE,73,55,99,89,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Cealing Height:",IDC_STATIC,18,72,49,8
+    EDITTEXT        IDC_CEALING_HEIGHT,73,71,99,12,ES_AUTOHSCROLL
+    LTEXT           "Sub Zone Script:",IDC_STATIC,13,87,54,8
+    EDITTEXT        IDC_EDIT2,73,86,99,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Apply",IDC_APPLY,196,144,73,14
+    LTEXT           "Wall Texture Style:",IDC_STATIC,182,39,60,8
+    COMBOBOX        IDC_LIST_WALL_TEX,249,37,99,89,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Horizontal:",IDC_STATIC,207,56,35,8
+    LTEXT           "Vertical:",IDC_STATIC,214,71,28,8
+    EDITTEXT        IDC_WALL_TEX_X,249,54,99,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WALL_TEX_Y,249,70,99,12,ES_AUTOHSCROLL
+    LTEXT           "Draw Styles:",IDC_STATIC,22,104,40,8
+    COMBOBOX        IDC_LIST_CEALING_DRAW,73,102,99,89,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Roof Texture Style:",IDC_STATIC,180,88,62,8
+    COMBOBOX        IDC_LIST_ROOF_TEX,249,86,99,89,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Horizontal:",IDC_STATIC,207,104,35,8
+    LTEXT           "Vertical:",IDC_STATIC,214,118,28,8
+    EDITTEXT        IDC_ROOF_TEX_X,249,102,99,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROOF_TEX_Y,249,117,99,12,ES_AUTOHSCROLL
+END
+
+IDD_EDIT_SUB DIALOGEX 0, 0, 213, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Tile Edit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Sub Zone:",IDC_STATIC,7,25,34,8
+    COMBOBOX        IDC_LIST_SUB,49,22,157,89,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Paint Mode:",IDC_STATIC,7,9,39,8
+    COMBOBOX        IDC_LIST_MODE,49,7,157,89,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Block mode",IDC_BLOCK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,42,53,8
+END
+
+IDD_EDIT_ENTITY DIALOGEX 0, 0, 244, 140
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Entity Picker"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_SUB,7,35,107,78,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_ENT,127,35,110,78,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Entity Category",IDC_STATIC,41,23,56,8
+    LTEXT           "Entity",IDC_STATIC,164,23,36,8
+    PUSHBUTTON      "New Category",IDC_NEW_CAT,37,119,50,14
+    PUSHBUTTON      "New Item",IDC_NEW_ITEM,157,119,50,14
+    COMBOBOX        IDC_COMBO_MODE,40,7,81,84,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Mode:",IDC_STATIC,7,8,21,8
+    PUSHBUTTON      "Edit By Name",IDC_EDIT_BY_NAME,157,7,50,14
+END
+
+IDD_NEW_CAT DIALOG DISCARDABLE  0, 0, 186, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Category"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,8,90,50,14
+    LTEXT           "Enter the name of the new category.  Do not include punctuation like commas or periods as this name will also be used for the filename also.",
+                    IDC_STATIC,8,7,171,38
+    EDITTEXT        IDC_EDIT_SUBCAT,66,82,113,14,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Category Name:",IDC_STATIC,8,84,51,11,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_FNAME,66,58,113,14,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,8,60,51,11
+END
+
+IDD_EDIT_ENT_BASE DIALOG DISCARDABLE  0, 0, 287, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Edit Entity Template"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,117,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,230,117,50,14
+    LTEXT           "Template Name:",IDC_STATIC,7,8,53,8
+    EDITTEXT        IDC_NAME,65,7,115,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Edit Item Defaults",IDC_DEFAULTS,96,117,100,14
+    LTEXT           "Graphic or model file name:",IDC_STATIC,7,25,86,8
+    EDITTEXT        IDC_VISUAL,100,24,115,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_DRAW_MODE,52,59,104,55,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Draw mode:",IDC_STATIC,7,60,40,12
+    CONTROL         "Follow ground tilt",IDC_FOLLOW_GROUND_TILT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,79,73,12
+    LTEXT           "Size mod:",IDC_STATIC,7,43,35,10
+    EDITTEXT        IDC_SIZE_X,61,42,38,12,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,52,44,8,8
+    EDITTEXT        IDC_SIZE_Y2,118,42,37,12,ES_AUTOHSCROLL
+    LTEXT           "Y:",IDC_STATIC,108,44,8,8
+    EDITTEXT        IDC_SIZE_Z,174,42,34,12,ES_AUTOHSCROLL
+    LTEXT           "Z:",IDC_STATIC,164,44,8,8
+    PUSHBUTTON      "...",IDC_CHOOSE_GRAPHIC,218,24,9,13
+    CONTROL         "Enable lighting",IDC_ENABLE_LIGHTING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,92,79,73,12
+    LTEXT           "Script (or blank for none):",IDC_STATIC,7,97,80,11
+    EDITTEXT        IDC_SCRIPT,93,95,148,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CHOOSE_SCRIPT,244,95,9,13
+    PUSHBUTTON      "Edit",IDC_EDIT_SCRIPT,256,95,21,13
+END
+
+IDD_EDIT_ENT_DEFAULT DIALOGEX 0, 0, 186, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Edit Entity"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,74,50,14
+    LTEXT           "Entity Name:",IDC_STATIC,7,8,44,10
+    EDITTEXT        IDC_NAME,61,7,118,13,ES_AUTOHSCROLL
+    LTEXT           "Size mod:",IDC_STATIC,7,25,35,10
+    EDITTEXT        IDC_SIZE_X,61,24,29,12,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,52,26,8,8
+    EDITTEXT        IDC_SIZE_Y,106,24,29,12,ES_AUTOHSCROLL
+    LTEXT           "Y:",IDC_STATIC,96,26,8,8
+    EDITTEXT        IDC_SIZE_Z,150,24,29,12,ES_AUTOHSCROLL
+    LTEXT           "Z:",IDC_STATIC,140,26,8,8
+    PUSHBUTTON      "Items",IDC_ITEMS,68,74,50,14
+    CONTROL         "Free move (use keypad up/down)",IDC_GROUND_STICKY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,60,158,10
+    LTEXT           "Dir in rads:",IDC_STATIC,7,41,40,8
+    EDITTEXT        IDC_DIR,61,40,29,12,ES_AUTOHSCROLL
+END
+
+IDD_ITEM_LIST DIALOG DISCARDABLE  0, 0, 186, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Inventory/Attached Items"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    LISTBOX         IDC_LIST,7,7,172,63,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_ADD,7,76,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVE,129,76,50,14
+END
+
+IDD_PICK_ENTITY DIALOG DISCARDABLE  0, 0, 244, 135
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Entity Picker"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST_SUB,7,37,107,70,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_ENT,127,37,110,70,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Entity Category",IDC_STATIC,41,25,56,8
+    LTEXT           "Entity",IDC_STATIC,164,25,36,8
+    LTEXT           "Select Entity by double clicking it in the right pane. Or select cancel to abort.",
+                    IDC_STATIC,7,7,230,17
+    PUSHBUTTON      "Cancel",IDC_CANCEL,80,112,77,16
+END
+
+IDD_WEATHER DIALOG DISCARDABLE  0, 0, 449, 241
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Weather Preset Manager"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,220,50,14
+    PUSHBUTTON      "Load",ID_LOAD,60,220,50,14
+    PUSHBUTTON      "Save",ID_SAVE,113,220,50,14
+    EDITTEXT        IDC_SKYBOX_FRONT,60,18,146,13,ES_AUTOHSCROLL
+    GROUPBOX        "SkyBox - Leave blank to not use.",IDC_STATIC,7,5,210,
+                    132
+    LTEXT           "Front",IDC_STATIC,20,20,33,9
+    EDITTEXT        IDC_SKYBOX_BACK,60,34,146,13,ES_AUTOHSCROLL
+    LTEXT           "Back",IDC_STATIC,20,36,33,9
+    EDITTEXT        IDC_SKYBOX_LEFT,60,50,146,13,ES_AUTOHSCROLL
+    LTEXT           "Left",IDC_STATIC,20,52,33,9
+    EDITTEXT        IDC_SKYBOX_RIGHT,60,66,146,13,ES_AUTOHSCROLL
+    LTEXT           "Right",IDC_STATIC,20,68,33,9
+    EDITTEXT        IDC_SKYBOX_BOTTOM,60,82,146,13,ES_AUTOHSCROLL
+    LTEXT           "Bottom",IDC_STATIC,20,84,33,9
+    EDITTEXT        IDC_SKYBOX_TOP,60,98,146,13,ES_AUTOHSCROLL
+    LTEXT           "Top",IDC_STATIC,20,100,33,9
+    GROUPBOX        "Lighting - Use between 0.0 and 1.0 for all values",
+                    IDC_STATIC,7,143,210,67
+    PUSHBUTTON      "Apply",ID_APPLY,392,220,50,14
+    LTEXT           "Height Offset",IDC_STATIC,21,117,44,8
+    EDITTEXT        IDC_SKYBOX_HEIGHT_OFFSET,72,115,45,13,ES_AUTOHSCROLL
+    LTEXT           "Size",IDC_STATIC,133,117,16,8
+    EDITTEXT        IDC_SKYBOX_SIZE,154,115,52,13,ES_AUTOHSCROLL
+    LTEXT           "Light Direction",IDC_STATIC,18,157,47,8
+    EDITTEXT        IDC_LIGHT_DIR_X,81,156,29,12,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,71,158,8,8
+    EDITTEXT        IDC_LIGHT_DIR_Y,125,156,29,12,ES_AUTOHSCROLL
+    LTEXT           "Y:",IDC_STATIC,115,158,8,8
+    EDITTEXT        IDC_LIGHT_DIR_Z,169,156,29,12,ES_AUTOHSCROLL
+    LTEXT           "Z:",IDC_STATIC,159,158,8,8
+    LTEXT           "Light Color",IDC_STATIC,17,175,41,8
+    EDITTEXT        IDC_LIGHT_R,81,174,29,12,ES_AUTOHSCROLL
+    LTEXT           "R:",IDC_STATIC,72,176,8,8
+    EDITTEXT        IDC_LIGHT_G,126,174,29,12,ES_AUTOHSCROLL
+    LTEXT           "G:",IDC_STATIC,116,176,8,8
+    EDITTEXT        IDC_LIGHT_B,170,174,29,12,ES_AUTOHSCROLL
+    LTEXT           "B:",IDC_STATIC,160,176,8,8
+    LTEXT           "Ambient Color",IDC_STATIC,17,194,49,8
+    EDITTEXT        IDC_AMBIENT_R,81,193,29,12,ES_AUTOHSCROLL
+    LTEXT           "R:",IDC_STATIC,72,195,8,8
+    EDITTEXT        IDC_AMBIENT_G,126,193,29,12,ES_AUTOHSCROLL
+    LTEXT           "G:",IDC_STATIC,116,195,8,8
+    EDITTEXT        IDC_AMBIENT_B,170,193,29,12,ES_AUTOHSCROLL
+    LTEXT           "B:",IDC_STATIC,160,195,8,8
+    GROUPBOX        "Fog - Set End Distance to 0 to disable",IDC_STATIC,226,
+                    7,210,46
+    LTEXT           "Color",IDC_STATIC,235,21,41,8
+    EDITTEXT        IDC_FOG_R,300,18,29,12,ES_AUTOHSCROLL
+    LTEXT           "R:",IDC_STATIC,291,20,8,8
+    EDITTEXT        IDC_FOG_G,345,18,29,12,ES_AUTOHSCROLL
+    LTEXT           "G:",IDC_STATIC,335,20,8,8
+    EDITTEXT        IDC_FOG_B,389,18,29,12,ES_AUTOHSCROLL
+    LTEXT           "B:",IDC_STATIC,379,20,8,8
+    LTEXT           "Start dist",IDC_STATIC,234,37,30,8
+    EDITTEXT        IDC_FOG_START,271,34,53,12,ES_AUTOHSCROLL
+    LTEXT           "End dist",IDC_STATIC,332,37,30,8
+    EDITTEXT        IDC_FOG_END,365,34,53,12,ES_AUTOHSCROLL
+    GROUPBOX        "Skydome - Leave texture blank to not use",IDC_STATIC,
+                    225,57,210,67
+    EDITTEXT        IDC_SKYDOME_TEX,272,72,146,13,ES_AUTOHSCROLL
+    LTEXT           "Texture",IDC_STATIC,232,74,33,9
+    LTEXT           "Size",IDC_STATIC,234,90,47,8
+    EDITTEXT        IDC_SKYDOME_SIZE_X,301,89,29,12,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,291,91,8,8
+    EDITTEXT        IDC_SKYDOME_SIZE_Y,345,89,29,12,ES_AUTOHSCROLL
+    LTEXT           "Y:",IDC_STATIC,335,91,8,8
+    EDITTEXT        IDC_SKYDOME_SIZE_Z,389,89,29,12,ES_AUTOHSCROLL
+    LTEXT           "Z:",IDC_STATIC,379,91,8,8
+    CONTROL         "Disable Lighting",IDC_SKYDOME_LIGHT_DISABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,233,105,68,12
+    LTEXT           "Height Offset",IDC_STATIC,322,107,44,8
+    EDITTEXT        IDC_SKYDOME_HEIGHT_OFFSET,373,106,45,13,ES_AUTOHSCROLL
+    GROUPBOX        "Weather Script (leave blank for none)",IDC_STATIC,225,
+                    143,209,67
+    EDITTEXT        IDC_SCRIPT,251,155,166,13,ES_AUTOHSCROLL
+    LTEXT           "File:",IDC_STATIC,231,157,17,9
+END
+
+IDD_ENT_CHOOSE DIALOG DISCARDABLE  0, 0, 186, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Entity Choose By Name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,98,50,14
+    LISTBOX         IDC_LIST,7,7,172,81,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Edit",IDC_EDIT,129,98,50,14
+    PUSHBUTTON      "Delete",IDC_DELETE,66,98,50,14
+END
+
+IDD_EDITOR_CONFIG DIALOG DISCARDABLE  0, 0, 294, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Editor Config"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,237,69,50,14
+    LTEXT           "Set base path:",IDC_STATIC,7,43,47,8
+    EDITTEXT        IDC_PATH,62,42,207,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_FILE,274,43,13,13,WS_DISABLED
+    LTEXT           "Setting the base path allows you to have the editor load scripts and graphics from a MOD directory.  If the script/graphic isn't found, it also searches the main game dir.  To edit the main  game, leave this blank. (example: mod\\dir_name)",
+                    IDC_STATIC,7,7,280,25
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "SWEd MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SWEd\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001\0"
+            VALUE "OriginalFilename", "SWEd.EXE\0"
+            VALUE "ProductName", "SWEd Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_SWED_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 462
+        BOTTOMMARGIN, 275
+    END
+
+    IDD_3D, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_LOG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+    END
+
+    IDD_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_TERRAFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_WORLD_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_LANDSCAPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_ZONE_PROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_SUB_ZONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_EDIT_SUB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_EDIT_ENTITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_NEW_CAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_EDIT_ENT_BASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_EDIT_ENT_DEFAULT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_ITEM_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_PICK_ENTITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_WEATHER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 442
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_ENT_CHOOSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_EDITOR_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 287
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_FILE MENU DISCARDABLE 
+BEGIN
+    POPUP "Camera View"
+    BEGIN
+        MENUITEM "Set Camera to free mode",     ID_VIEW_FREECAMERA
+        MENUITEM "Set Camera to free walk mode", ID_VIEW_PLAYERCAMERA
+        MENUITEM "Set Camera to top view mode", ID_VIEW_SETCAMERATOTOPVIEWMODE
+
+        MENUITEM "Set Camera to player car driving mode", 
+                                                ID_VIEW_CARDRIVINGMODE
+        MENUITEM "Set Camera to player walk mode", 
+                                                ID_VIEW_SETCAMERATOPLAYERWALKMODE
+
+    END
+    POPUP "Zone"
+    BEGIN
+        MENUITEM "Load",                        ID_LOADLEVEL_LOADLEVEL
+        MENUITEM "Save",                        ID_LOADLEVEL_SAVELEVEL
+        MENUITEM "Create",                      IDD_NEW_ZONE
+        MENUITEM "Terraform",                   IDC_TERRAFORM
+        MENUITEM "Edit Properties",             IDR_ZONE_PROP
+        MENUITEM "Delete All Ents",             ID_ZONE_DELETEALLENTS
+        MENUITEM "Toggle landscape wireframe mode", 
+                                                ID_ZONE_TOGGLEWIREFRAMEMODE
+        MENUITEM "Toggle wireframe mode overlay (1)", ID_ZONE_WIRE
+    END
+    POPUP "Tile"
+    BEGIN
+        MENUITEM "Toggle tile grid (ctrl-h)",   ID_TILE_TOGGLETILESHOWING
+    END
+    POPUP "Sub Zone"
+    BEGIN
+        MENUITEM "Edit Properties",             ID_SUBZONE_PROPERTIES
+    END
+    POPUP "Fog && Lights"
+    BEGIN
+        MENUITEM "Randomly move the sun position", IDD_RAND_MOVE_SUN
+        MENUITEM "Randomly set some fog",       IDD_RAND_SET_FOG
+        MENUITEM "Reset fog and lights to normal", IDD_LIGHT_RESET
+        MENUITEM "Weather Preset Manager",      MI_WEATHER_PRESET
+    END
+    POPUP "Window"
+    BEGIN
+        MENUITEM "Open Texture Tool (Ctrl-1)",  IDR_WORLD_EDIT
+        MENUITEM "Open Landscape Tool (Ctrl-2)", ID_OPEN_LANDSCAPE
+        MENUITEM "Open Tile Edit Tool (Ctrl-3)", ID_OPEN_SUB_ZONE_EDIT
+        MENUITEM "Open Entity Tool (Ctrl-4)",   ID_OPEN_ENTITY_TOOL
+    END
+    POPUP "Diagnostics"
+    BEGIN
+        MENUITEM "List active entities (F8)",   ID_DIAGNOSTICS_LISTLOADEDENTITIES
+
+        MENUITEM "List loaded resources (F9)",  ID_DIAGNOSTICS_LISTLOADEDRESOURCES
+
+        MENUITEM "Create some cars",            ID_DIAGNOSTICS_CREATESOMECARS
+
+        MENUITEM "Create 500 cars",             ID_CREATE500CARS
+        MENUITEM "Create some spheres",         ID_DIAGNOSTICS_CREATESOMESPHERES
+
+        MENUITEM "Create some tree sprites",    ID_DIAGNOSTICS_CREATESOMETREESPRITES
+
+        MENUITEM "Create human",                ID_DIAG_CREATEHUMAN
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Editor Configuration",        ID_EDITOR_CONFIG
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "1",            IDR_WORLD_EDIT,         VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_OPEN_LANDSCAPE,      VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_OPEN_SUB_ZONE_EDIT,  VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_OPEN_ENTITY_TOOL,    VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_TILE_TOGGLETILESHOWING, VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "DirectX.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\SWEd.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

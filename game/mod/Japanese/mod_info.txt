@@ -1,0 +1,7 @@
+//this file contains the definition of the mod.  The main engine parses this.
+
+mod_name|Japanese Conversion
+//these aren't actually used yet, but fill them out anyway
+mod_author|Akiko Robinson
+mod_description|TLM converted to Japanese.
+mod_pic|interface\pic.jpg

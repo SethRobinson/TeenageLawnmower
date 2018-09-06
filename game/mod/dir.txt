@@ -1,0 +1,2 @@
+This directory contains any downloaded mods.  Actually it should only contain mod directorys which in turn hold all the stuff for that mod.
+(actually, mod support was disabled for some reason... so not including the mods, despite a Japanese translation being 70% done)

@@ -1,0 +1,23 @@
+particlesystem "test" 1.00 {
+  position = XYZ(0,1.4,0)
+ eventsequence "test" {
+   sourceblendmode = D3DBLEND_SRCALPHA
+   destblendmode = D3DBLEND_INVSRCALPHA
+   numparticles = 100
+    gravity = XYZ(0,random(0.6,0.8),0)
+    emitrate = 5
+    emitradius = xyz(random(-1,1),2,random(-1,1))
+     lifetime = 5
+ 
+   texture = "texture\ps\smoke2.tga"
+    initial color = rgba(1,1,1,0.5)
+    initial velocity = XYZ(random(-0.4,0.4),random(0.6,0.8),random(-0.4,0.4))
+    initial size = random(0.5,1)
+    fade so at 3.5 color = rgba(1,1,1,random(0.05, 0.1))
+//    fade so at 3 size = 6
+    fade so at 5 velocity = XYZ(random(0.1,0.3),0,random(0.1,0.3))
+ 
+   fade so final color = rgba(1,1,1,0)
+    fade so final size = random(1,2)
+}
+}

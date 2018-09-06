@@ -1,0 +1,7 @@
+//this file contains the definition of the mod.  The main engine parses this.
+
+mod_name|Example Mod
+//these aren't actually used yet, but fill them out anyway
+mod_author|Seth A. Robinson
+mod_description|Kind of a template mod.
+mod_pic|interface\pic.jpg

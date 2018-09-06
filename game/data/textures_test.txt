@@ -1,0 +1,6 @@
+//Base textures - they are only loaded if used and use a binary tree for access so don't be
+//afraid to fill them up.
+
+//Don't use any numbers over 10,000, these are reserved.
+
+set_texture|1|texture\grass.dds

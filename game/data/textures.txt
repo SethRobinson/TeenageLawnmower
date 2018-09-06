@@ -1,0 +1,93 @@
+//Base textures - they are only loaded if used and use a binary tree for access so don't be
+//afraid to fill them up.
+
+//Don't use any numbers over 10,000, these are reserved.
+
+set_texture|1|texture\grass.dds
+set_texture|2|texture\gravel.dds
+set_texture|17|texture\gray brick.dds
+set_texture|18|texture\gray brick window.dds
+set_texture|19|texture\gray brick door.dds
+set_texture|50|texture\grass_light.dds
+
+
+set_texture|100|texture\building - skyr29S.dds
+set_texture|101|texture\building - wood16.dds
+set_texture|102|texture\building - wood17.dds
+
+
+
+
+//Akiko's textures (start from 200 and keep adding 1)
+
+set_texture|200|texture\cement.dds
+
+set_texture|206|texture\fence.dds
+set_texture|207|texture\transparent.dds
+
+
+set_texture|210|texture\brick_2_01.dds
+set_texture|211|texture\brick_2_02.dds
+set_texture|212|texture\fence_green_mesh.dds
+set_texture|213|texture\mulch_small.dds
+
+222
+
+set_texture|217|texture\o_altaqua.dds
+set_texture|218|texture\o_rocks_nallow.dds
+set_texture|219|texture\fence_graveyard.dds
+set_texture|220|texture\o_durt_1.dds
+set_texture|221|texture\o_durt_2.dds
+set_texture|222|texture\o_durt_3.dds
+set_texture|223|texture\o_durt_4.dds
+set_texture|224|texture\fence_graveyard_door.dds
+
+
+set_texture|227|texture\MossyGround.dds
+set_texture|228|texture\ASPHALT1_small.dds
+set_texture|229|texture\richhouse_fence.dds
+set_texture|230|texture\STUCCO8_256.dds
+set_texture|231|texture\o_rock_left.dds
+set_texture|232|texture\o_rock_center.dds
+set_texture|233|texture\o_rock_right.dds
+set_texture|234|texture\o_rock.dds
+set_texture|235|texture\o_rock_center2.dds
+set_texture|236|texture\MossyGround_dead.dds
+set_texture|237|texture\o_brick_2_01.dds
+set_texture|238|texture\o_MossyGround_all.dds
+set_texture|239|texture\o_MossyGround_h.dds
+set_texture|240|texture\o_MossyGround_v.dds
+set_texture|241|texture\rock_moss.dds
+set_texture|242|texture\drymud.dds
+set_texture|243|texture\o_drymud_h.dds
+set_texture|244|texture\o_drymud_v.dds
+set_texture|245|texture\o_drymud_all.dds
+set_texture|246|texture\o_manhole.dds
+set_texture|247|texture\grydirt1_256.dds
+set_texture|248|texture\snow_256.dds
+set_texture|249|texture\o_rock_mossy_h.dds
+set_texture|250|texture\o_rock_mossy_v.dds
+set_texture|251|texture\o_rock_mossy_all.dds
+set_texture|252|texture\o_mulch_h.dds
+set_texture|253|texture\o_mulch_v.dds
+set_texture|254|texture\o_mulch_curve_top.dds
+set_texture|255|texture\o_mulch_curve_bottom.dds
+set_texture|256|texture\o_mulch_all.dds
+
+set_texture|261|texture\drymud.dds
+set_texture|262|texture\golf_green_1.dds
+set_texture|263|texture\golf_green_2.dds
+set_texture|264|texture\golf_green_3.dds
+set_texture|265|texture\golf_green_4.dds
+set_texture|266|texture\golf_sand_1.dds
+set_texture|267|texture\golf_sand_2.dds
+set_texture|268|texture\golf_sand_3.dds
+set_texture|269|texture\golf_sand_4.dds
+set_texture|270|texture\o_GRASS_light_tri.dds
+set_texture|271|texture\o_GRASS_light_cir.dds
+set_texture|272|texture\grass_off.dds
+set_texture|273|texture\o_drymud_cir.dds
+
+
+
+

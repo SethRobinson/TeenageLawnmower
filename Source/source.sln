@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SW", "SW.vcproj", "{C18EFC86-069B-4075-B6D0-2A48555B12B5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SWEd", "SWEd\SWEd.vcproj", "{2225031F-1BBF-4501-AB06-6504BBBCDFA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C18EFC86-069B-4075-B6D0-2A48555B12B5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C18EFC86-069B-4075-B6D0-2A48555B12B5}.Debug|Win32.Build.0 = Debug|Win32
+		{C18EFC86-069B-4075-B6D0-2A48555B12B5}.Release|Win32.ActiveCfg = Release|Win32
+		{C18EFC86-069B-4075-B6D0-2A48555B12B5}.Release|Win32.Build.0 = Release|Win32
+		{2225031F-1BBF-4501-AB06-6504BBBCDFA2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2225031F-1BBF-4501-AB06-6504BBBCDFA2}.Debug|Win32.Build.0 = Debug|Win32
+		{2225031F-1BBF-4501-AB06-6504BBBCDFA2}.Release|Win32.ActiveCfg = Release|Win32
+		{2225031F-1BBF-4501-AB06-6504BBBCDFA2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

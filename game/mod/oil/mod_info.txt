@@ -1,0 +1,7 @@
+//this file contains the definition of the mod.  The main engine parses this.
+
+mod_name|The Oily Bird Catches The Worm
+//these aren't actually used yet, but fill them out anyway
+mod_author|Dan Walma
+mod_description|A freak highway accident involving alcohol, bananas, potholes, and a shipment of oil has left the countryside in a sticky situation! Only you (and your lawnmower with the Oil-Away (TM) attachment) can save the day!
+mod_pic|interface\pic.jpg

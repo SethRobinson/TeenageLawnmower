@@ -1,0 +1,1 @@
+Expects this dir to contain an "include" and "Lib" dir from the DirectX 8 SDK.  For legal reasons they aren't included here.

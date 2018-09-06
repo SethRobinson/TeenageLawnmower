@@ -1,0 +1,25 @@
+particlesystem "grass" 1.00 {
+  position = XYZ(0,0,0)
+  eventsequence "blue" {
+    sourceblendmode = D3DBLEND_SRCALPHA
+   destblendmode = D3DBLEND_INVSRCALPHA
+    numparticles = 200
+   gravity = XYZ(0,-4,0)
+   emitrate = 50 
+  lifetime = 2
+   texture = "texture\ps\grass.tga"
+   emitradius = xyz(0,0,0)
+   initial color = rgba(1,1,1,1)
+   initial velocity = XYZ(random(-3,3),random(1,3),random(-3,3))
+   initial size = random(0.2,0.6)
+ //   at 0.001 color = rgba(0,1,0,1)
+  //at 1 eventtimer = 0.001 
+  // fade so final color = rgba(0,0,0,0)
+ //  fade so final size = 0  
+//    fade so at 0.5 color = rgba(1,1,1,1)
+  fade so at 2 color = rgba(1,1,1,0)
+  
+}
+ 
+
+}

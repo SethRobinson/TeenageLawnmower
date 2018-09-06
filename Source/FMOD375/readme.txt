@@ -1,0 +1,1 @@
+FMOD files go here.  For legal reasons they aren't included. It expects an old version of FMOD, 3.75.  Or you could tweak it to work with a new version or other audio library like Audiere.
