@@ -1,6 +1,8 @@
 Teenage Lawnmower Source code readme
 -----------------------------
 
+[![Video](https://img.youtube.com/vi/puXHQHPhvoY/0.jpg)](https://www.youtube.com/watch?v=puXHQHPhvoY)
+
 This is an old indie 3D "simulation" originally released in 2002 or 2003.  It was a 2003 IGF finalist.
 
 It includes a 3D engine Seth wrote, as well as a scripting engine Seth wrote.  (Same engine that was used in Funeral Quest)
